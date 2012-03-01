@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{%block content%}
+<form id="group-form" method="POST" action="/group/save" class="form-inline">{%csrf_token%}
+    {%for hidden in form.hidden_fields%}
+        {{hidden}}
+    {%endfor%}
+    {{form.as_p}}
+    <input type="submit" value="Save changes" />
+</form>
+{%endblock%}

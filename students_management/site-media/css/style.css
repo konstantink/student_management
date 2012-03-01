@@ -1,0 +1,11 @@
+.table td {
+    /*width: 60%;*/
+    vertical-align: middle;
+    text-align: center;
+}
+
+.edit-text, .add-text {
+    font: normal 8pt verdana,serif;
+    color: gray;
+    display: none;
+}

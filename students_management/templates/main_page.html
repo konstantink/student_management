@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+{%block extra%}
+    <script type="text/javascript">
+        function onMouseOver(){
+            $(".add-text").toggle();
+        }
+        function onMouseOut(){
+            $(".add-text").toggle();
+        }
+    </script>
+{%endblock%}
+{%block content%}
+    {%if groups%}
+        {%include 'groups_list.html'%}
+    {%else%}
+        <p>No available groups</p>
+    {%endif%}
+{%endblock%}

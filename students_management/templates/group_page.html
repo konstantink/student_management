@@ -1,0 +1,25 @@
+{%extends "base.html"%}
+{%block extra%}
+    <script type="text/javascript">
+        function onMouseOver(){
+            $(".edit-text").toggle();
+        }
+        function onMouseOut(){
+            $(".edit-text").toggle();
+        }
+    </script>
+{%endblock%}
+{%block content%}
+    <div class="row">
+        <div class="span12">
+            <h2 style="display:inline">Group: {{group.name}}</h2>&nbsp;&nbsp;&nbsp;
+            <a href="/group/edit?id={{group.id}}"><i class="icon-pencil" onmouseover="onMouseOver()" onmouseout="onMouseOut()"></i></a>
+            <span class="edit-text">Edit group</span>
+            {%if students%}
+                {%include "students_list.html"%}
+            {%else%}
+                <p>The group is empty</p>
+            {%endif%}
+        </div>
+    </div>
+{%endblock%}

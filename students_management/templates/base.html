@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student's management</title>
+        <link rel="stylesheet" href="/site-media/css/bootstrap.css" type="text/css" />
+        <link rel="stylesheet" href="/site-media/css/style.css" type="text/css" />
+        <script type="text/javascript" src="/site-media/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/site-media/js/bootstrap.js"></script>
+        {%block extra%}
+        {%endblock%}
+    </head>
+    <body>
+        {%include 'navigation.html'%}
+        <div class="container">
+            <div class="hero-unit">
+                <h1>Groups n' Students management</h1>
+                <p>The simple and intuative way to manage students and groups in university!</p>
+            </div>
+            {%block content%}{%endblock%}
+            <hr>
+            <footer><p>&copy; Company 2012</p></footer>
+        </div>
+    </body>
+</html>
