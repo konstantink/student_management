@@ -12,25 +12,9 @@ class MyModelChoiceField(ModelChoiceField):
 
 class GroupForm(ModelForm):
     seniorId = MyModelChoiceField(None, "(nobody)", label='Senior')
-    #id = IntegerField()
-
-    #def __init__(self, *args, **kwags):
-        #groupId = kwags.pop('groupId', None)
-        #super(forms.ModelForm, self).__init__(*args, **kwags)
-
-        #if groupId:
-            #self.fields['id'] = IntegerField(groupId)
-            #self.fields['seniorId'].queryset = Student.objects.filter(groupId=groupId)
-            #self.fields['id'].queryset = Group.objects.get(id=groupId)
 
     class Meta:
         model = Group
-        #fields = ('id', 'name', 'seniorId')
         widgets = {
             'id': HiddenInput()
         }
-
-
-#class GroupFormSet(BaseFormSet):
-#    def __init__(self, *args, **kwags):
-#        super(BaseFormSet, self).__init__(*args, **kwags)

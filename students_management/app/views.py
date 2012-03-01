@@ -51,13 +51,15 @@ def group_form_page(request):
     if request.method == 'POST':
         group, created = Group.objects.get_or_create(id=request.POST.get('id'))
         form = GroupForm(request.POST, instance=group)
+        if not created:
+            form.fields['seniorId'].queryset = Student.objects.filter(groupId=group.id)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/')
     elif request.GET.has_key('id'):
         groupId = int(request.GET.get('id'))
         group = Group.objects.get(id=groupId)
-        form = GroupForm(instance=group)#, groupId=group.id)
+        form = GroupForm(instance=group)
         form.fields['seniorId'].queryset = Student.objects.filter(groupId=groupId)
     else:
         form = GroupForm()
