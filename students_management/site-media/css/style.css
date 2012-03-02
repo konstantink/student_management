@@ -9,3 +9,22 @@
     color: gray;
     display: none;
 }
+
+.field {
+	font: bold 12px verdana,serif;
+}
+
+.value {
+	font: normal 12px verdana,serif;
+}
+
+.clr:after {
+	content: ".";
+ 	display: block;
+ 	height: 0;
+ 	font-size: 0;
+ 	line-height: 0;
+ 	overflow: hidden;
+ 	clear: both;
+ 	visibility: hidden;
+}

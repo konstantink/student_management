@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+{%block content%}
+	<div class="clr">
+		<img src="{{student.photo.url}}" style="float: left; margin-right: 10px; margin-top: -5px" />
+		<p><span class="field">Last name:</span> <span class="value">{{student.lastName}}</span></p>
+		<p><span class="field">First name:</span> <span class="value">{{student.firstName}}</span></p>
+		<p><span class="field">Middle name:</span> <span class="value">{{student.middleName}}</span></p>
+		<p><span class="field">Birthday:</span> <span class="value">{{student.birthday}}</span></p>
+		<p><span class="field">Group:</span> <span class="value">{{student.groupId.name}}</span></p>
+	</div>
+{%endblock%}

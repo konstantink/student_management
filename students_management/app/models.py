@@ -16,5 +16,5 @@ class Student(models.Model):
 class Group(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=32, null=False)
-    seniorId = models.ForeignKey(Student, blank=True, null=True, on_delete=models.SET_NULL)
+    seniorId = models.ForeignKey(Student, default=None, blank=True, null=True, on_delete=models.SET_NULL)
 

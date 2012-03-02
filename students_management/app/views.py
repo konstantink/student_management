@@ -1,5 +1,5 @@
 # Create your views here.
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage, InvalidPage
@@ -44,18 +44,18 @@ def group_page(request, groupId):
     return render_to_response('group_page.html', variables)
 
 
-def _group_save(request, form):
-    group, created = Group.objects.get_or_create(name)
-
 def group_form_page(request):
     if request.method == 'POST':
-        group, created = Group.objects.get_or_create(id=request.POST.get('id'))
+        try:
+            group = Group.objects.get(id=request.POST.get('id'))
+        except Group.DoesNotExist:
+            seniorId = request.POST.get(u'seniorId') or None
+            group = Group(id=request.POST.get(u'id'), name=request.POST.get(u'name'), seniorId=seniorId)
         form = GroupForm(request.POST, instance=group)
-        if not created:
-            form.fields['seniorId'].queryset = Student.objects.filter(groupId=group.id)
+        form.fields['seniorId'].queryset = Student.objects.filter(groupId=group.id)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/group/{0}'.format(group.id))
     elif request.GET.has_key('id'):
         groupId = int(request.GET.get('id'))
         group = Group.objects.get(id=groupId)
@@ -65,6 +65,7 @@ def group_form_page(request):
         form = GroupForm()
         newId = int(Group.objects.all().aggregate(Max('id'))['id__max'])+1
         form.fields['id'].initial = newId
+        form.fields['seniorId'].queryset = Student.objects.filter(groupId=newId)
 
     variables = RequestContext(request, {'form': form})
     
@@ -72,4 +73,11 @@ def group_form_page(request):
 
 
 def student_page(request, studentId):
-    return HttpResponse("Here will be the list the student's portfolio") 
+    try:
+        student = Student.objects.get(id=studentId)
+    except:
+        raise Http404('Requested student is not found')
+
+    variables = RequestContext(request, {'student': student})
+
+    return render_to_response('student_page.html', variables)
