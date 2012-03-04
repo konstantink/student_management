@@ -5,7 +5,9 @@
 }
 
 .group-edit-text, .group-add-text,
-.student-edit-text, .student-add-text {
+.group-remove-text,
+.student-edit-text, .student-add-text,
+.student-remove-text {
     font: normal 8pt verdana,serif;
     color: gray;
     display: none;

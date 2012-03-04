@@ -19,11 +19,11 @@
         "model": "app.Student",
         "pk": 1,
         "fields": {
-            "lastName": "Иванов",
-            "firstName": "Иван",
-            "middleName": "Иванович",
+            "last_name": "Иванов",
+            "first_name": "Иван",
+            "middle_name": "Иванович",
             "birthday": "1989-4-19",
-            "studentTicket": "83953304",
+            "student_ticket": "83953304",
             "groupId": "1",
             "photo": "1.jpg"
         }
@@ -32,11 +32,11 @@
         "model": "app.Student",
         "pk": 2,
         "fields": {
-            "lastName": "Сидоров",
-            "firstName": "Сидор",
-            "middleName": "Сидорович",
+            "last_name": "Сидоров",
+            "first_name": "Сидор",
+            "middle_name": "Сидорович",
             "birthday": "1989-5-28",
-            "studentTicket": "83953306",
+            "student_ticket": "83953306",
             "groupId": "1",
             "photo": "2.jpg"
         }
@@ -45,11 +45,11 @@
         "model": "app.Student",
         "pk": 3,
         "fields": {
-            "lastName": "Петров",
-            "firstName": "Петр",
-            "middleName": "Петрович",
+            "last_name": "Петров",
+            "first_name": "Петр",
+            "middle_name": "Петрович",
             "birthday": "1989-8-03",
-            "studentTicket": "83953307",
+            "student_ticket": "83953307",
             "groupId": "1",
             "photo": "3.jpg"
         }
@@ -58,11 +58,11 @@
         "model": "app.Student",
         "pk": 4,
         "fields": {
-            "lastName": "Держибок",
-            "firstName": "Игнатий",
-            "middleName": "Валерьевич",
+            "last_name": "Держибок",
+            "first_name": "Игнатий",
+            "middle_name": "Валерьевич",
             "birthday": "1989-4-11",
-            "studentTicket": "83953309",
+            "student_ticket": "83953309",
             "groupId": "1",
             "photo": "4.jpg"
         }
@@ -71,11 +71,11 @@
         "model": "app.Student",
         "pk": 5,
         "fields": {
-            "lastName": "Эвелев",
-            "firstName": "Симон",
-            "middleName": "Валерьянович",
+            "last_name": "Эвелев",
+            "first_name": "Симон",
+            "middle_name": "Валерьянович",
             "birthday": "1989-1-31",
-            "studentTicket": "83953310",
+            "student_ticket": "83953310",
             "groupId": "1",
             "photo": "5.jpg"
         }
@@ -84,11 +84,11 @@
         "model": "app.Student",
         "pk": 6,
         "fields": {
-            "lastName": "Кардашев",
-            "firstName": "Михаил",
-            "middleName": "Степанович",
+            "last_name": "Кардашев",
+            "first_name": "Михаил",
+            "middle_name": "Степанович",
             "birthday": "1989-3-21",
-            "studentTicket": "83953311",
+            "student_ticket": "83953311",
             "groupId": "1",
             "photo": "6.jpg"
         }
@@ -97,11 +97,11 @@
         "model": "app.Student",
         "pk": 7,
         "fields": {
-            "lastName": "Берестева",
-            "firstName": "Зинаида",
-            "middleName": "Анатольевна",
+            "last_name": "Берестева",
+            "first_name": "Зинаида",
+            "middle_name": "Анатольевна",
             "birthday": "1989-6-28",
-            "studentTicket": "83953312",
+            "student_ticket": "83953312",
             "groupId": "1",
             "photo": "7.jpg"
         }
@@ -110,11 +110,11 @@
         "model": "app.Student",
         "pk": 8,
         "fields": {
-            "lastName": "Кучер",
-            "firstName": "Татьяна",
-            "middleName": "Ивановна",
+            "last_name": "Кучер",
+            "first_name": "Татьяна",
+            "middle_name": "Ивановна",
             "birthday": "1989-12-5",
-            "studentTicket": "83953314",
+            "student_ticket": "83953314",
             "groupId": "1",
             "photo": "8.jpg"
         }
@@ -123,11 +123,11 @@
         "model": "app.Student",
         "pk": 9,
         "fields": {
-            "lastName": "Першин",
-            "firstName": "Степан",
-            "middleName": "Геннадиевич",
+            "last_name": "Першин",
+            "first_name": "Степан",
+            "middle_name": "Геннадиевич",
             "birthday": "1990-7-25",
-            "studentTicket": "83953315",
+            "student_ticket": "83953315",
             "groupId": "1",
             "photo": "9.jpg"
         }
@@ -136,11 +136,11 @@
         "model": "app.Student",
         "pk": 10,
         "fields": {
-            "lastName": "Чудило",
-            "firstName": "Алла",
-            "middleName": "Константиновна",
+            "last_name": "Чудило",
+            "first_name": "Алла",
+            "middle_name": "Константиновна",
             "birthday": "1989-10-25",
-            "studentTicket": "83953317",
+            "student_ticket": "83953317",
             "groupId": "1",
             "photo": "10.jpg"
         }
@@ -149,11 +149,11 @@
         "model": "app.Student",
         "pk": 11,
         "fields": {
-            "lastName": "Чебрец",
-            "firstName": "Сергей",
-            "middleName": "Иванович",
+            "last_name": "Чебрец",
+            "first_name": "Сергей",
+            "middle_name": "Иванович",
             "birthday": "1989-4-30",
-            "studentTicket": "83953319",
+            "student_ticket": "83953319",
             "groupId": "1",
             "photo": "11.jpg"
         }
@@ -162,11 +162,11 @@
         "model": "app.Student",
         "pk": 12,
         "fields": {
-            "lastName": "Вертихвост",
-            "firstName": "Лидия",
-            "middleName": "Павловна",
+            "last_name": "Вертихвост",
+            "first_name": "Лидия",
+            "middle_name": "Павловна",
             "birthday": "1988-7-15",
-            "studentTicket": "83953321",
+            "student_ticket": "83953321",
             "groupId": "1",
             "photo": "12.jpg"
         }
@@ -175,11 +175,11 @@
         "model": "app.Student",
         "pk": 13,
         "fields": {
-            "lastName": "Степанов",
-            "firstName": "Иван",
-            "middleName": "Валентинович",
+            "last_name": "Степанов",
+            "first_name": "Иван",
+            "middle_name": "Валентинович",
             "birthday": "1989-6-23",
-            "studentTicket": "83953322",
+            "student_ticket": "83953322",
             "groupId": "1",
             "photo": "13.jpg"
         }
@@ -188,11 +188,11 @@
         "model": "app.Student",
         "pk": 14,
         "fields": {
-            "lastName": "Боядинов",
-            "firstName": "Иннокентий",
-            "middleName": "Сергеевич",
+            "last_name": "Боядинов",
+            "first_name": "Иннокентий",
+            "middle_name": "Сергеевич",
             "birthday": "1990-2-16",
-            "studentTicket": "83953323",
+            "student_ticket": "83953323",
             "groupId": "1",
             "photo": "14.jpg"
         }
@@ -201,11 +201,11 @@
         "model": "app.Student",
         "pk": 15,
         "fields": {
-            "lastName": "Малышев",
-            "firstName": "Михаил",
-            "middleName": "Миронович",
+            "last_name": "Малышев",
+            "first_name": "Михаил",
+            "middle_name": "Миронович",
             "birthday": "1989-4-13",
-            "studentTicket": "83953324",
+            "student_ticket": "83953324",
             "groupId": "1",
             "photo": "15.jpg"
         }
@@ -214,11 +214,11 @@
         "model": "app.Student",
         "pk": 16,
         "fields": {
-            "lastName": "Смирнов",
-            "firstName": "Валентин",
-            "middleName": "Иванович",
+            "last_name": "Смирнов",
+            "first_name": "Валентин",
+            "middle_name": "Иванович",
             "birthday": "1988-5-31",
-            "studentTicket": "83953325",
+            "student_ticket": "83953325",
             "groupId": "1",
             "photo": "16.jpg"
         }
@@ -227,11 +227,11 @@
         "model": "app.Student",
         "pk": 17,
         "fields": {
-            "lastName": "Сталевар",
-            "firstName": "Артур",
-            "middleName": "Фридрихович",
+            "last_name": "Сталевар",
+            "first_name": "Артур",
+            "middle_name": "Фридрихович",
             "birthday": "1989-4-18",
-            "studentTicket": "83953326",
+            "student_ticket": "83953326",
             "groupId": "1",
             "photo": "17.jpg"
         }
@@ -240,11 +240,11 @@
         "model": "app.Student",
         "pk": 18,
         "fields": {
-            "lastName": "Чижик",
-            "firstName": "Светлана",
-            "middleName": "Михайловна",
+            "last_name": "Чижик",
+            "first_name": "Светлана",
+            "middle_name": "Михайловна",
             "birthday": "1989-9-3",
-            "studentTicket": "83953327",
+            "student_ticket": "83953327",
             "groupId": "1",
             "photo": "18.jpg"
         }
@@ -253,11 +253,11 @@
         "model": "app.Student",
         "pk": 19,
         "fields": {
-            "lastName": "Бредин",
-            "firstName": "Самуил",
-            "middleName": "Петрович",
+            "last_name": "Бредин",
+            "first_name": "Самуил",
+            "middle_name": "Петрович",
             "birthday": "1989-8-16",
-            "studentTicket": "83953328",
+            "student_ticket": "83953328",
             "groupId": "1",
             "photo": "19.jpg"
         }
@@ -266,11 +266,11 @@
         "model": "app.Student",
         "pk": 20,
         "fields": {
-            "lastName": "Трошкин",
-            "firstName": "Александр",
-            "middleName": "Иванович",
+            "last_name": "Трошкин",
+            "first_name": "Александр",
+            "middle_name": "Иванович",
             "birthday": "1989-7-27",
-            "studentTicket": "83953329",
+            "student_ticket": "83953329",
             "groupId": "1",
             "photo": "20.jpg"
         }
@@ -279,11 +279,11 @@
         "model": "app.Student",
         "pk": 21,
         "fields": {
-            "firstName": "Сергей",
-            "lastName": "Поздняков",
-            "middleName": "Степанович",
+            "first_name": "Сергей",
+            "last_name": "Поздняков",
+            "middle_name": "Степанович",
             "birthday": "1989-11-21",
-            "studentTicket": "83953330",
+            "student_ticket": "83953330",
             "groupId": "2",
             "photo": "21.jpg"
         }
@@ -292,11 +292,11 @@
         "model": "app.Student",
         "pk": 22,
         "fields": {
-            "firstName": "Анна",
-            "lastName": "Решетняк",
-            "middleName": "Владиславовна",
+            "first_name": "Анна",
+            "last_name": "Решетняк",
+            "middle_name": "Владиславовна",
             "birthday": "1989-5-18",
-            "studentTicket": "83953331",
+            "student_ticket": "83953331",
             "groupId": "2",
             "photo": "22.jpg"
         }
@@ -305,11 +305,11 @@
         "model": "app.Student",
         "pk": 23,
         "fields": {
-            "firstName": "Игорь",
-            "lastName": "Фесенко",
-            "middleName": "Викторович",
+            "first_name": "Игорь",
+            "last_name": "Фесенко",
+            "middle_name": "Викторович",
             "birthday": "1989-8-13",
-            "studentTicket": "83953332",
+            "student_ticket": "83953332",
             "groupId": "2",
             "photo": "23.jpg"
         }
@@ -318,11 +318,11 @@
         "model": "app.Student",
         "pk": 24,
         "fields": {
-            "firstName": "Евгений",
-            "lastName": "Рябинин",
-            "middleName": "Валерьевич",
+            "first_name": "Евгений",
+            "last_name": "Рябинин",
+            "middle_name": "Валерьевич",
             "birthday": "1989-9-20",
-            "studentTicket": "83953333",
+            "student_ticket": "83953333",
             "groupId": "2",
             "photo": "24.jpg"
         }
@@ -331,11 +331,11 @@
         "model": "app.Student",
         "pk": 25,
         "fields": {
-            "firstName": "Игорь",
-            "lastName": "Захаров",
-            "middleName": "Михайлович",
+            "first_name": "Игорь",
+            "last_name": "Захаров",
+            "middle_name": "Михайлович",
             "birthday": "1989-11-2",
-            "studentTicket": "83953334",
+            "student_ticket": "83953334",
             "groupId": "2",
             "photo": "25.jpg"
         }
@@ -344,11 +344,11 @@
         "model": "app.Student",
         "pk": 26,
         "fields": {
-            "firstName": "Виталий",
-            "lastName": "Ивенко",
-            "middleName": "Сергеевич",
+            "first_name": "Виталий",
+            "last_name": "Ивенко",
+            "middle_name": "Сергеевич",
             "birthday": "1989-3-31",
-            "studentTicket": "83953335",
+            "student_ticket": "83953335",
             "groupId": "2",
             "photo": "26.jpg"
         }
@@ -357,11 +357,11 @@
         "model": "app.Student",
         "pk": 27,
         "fields": {
-            "firstName": "Катерина",
-            "lastName": "Боцман",
-            "middleName": "Анатольевна",
+            "first_name": "Катерина",
+            "last_name": "Боцман",
+            "middle_name": "Анатольевна",
             "birthday": "1989-11-18",
-            "studentTicket": "83953336",
+            "student_ticket": "83953336",
             "groupId": "2",
             "photo": "27.jpg"
         }
@@ -370,11 +370,11 @@
         "model": "app.Student",
         "pk": 28,
         "fields": {
-            "firstName": "Анна",
-            "lastName": "Голощапова",
-            "middleName": "Ивановна",
+            "first_name": "Анна",
+            "last_name": "Голощапова",
+            "middle_name": "Ивановна",
             "birthday": "1989-12-8",
-            "studentTicket": "83953337",
+            "student_ticket": "83953337",
             "groupId": "2",
             "photo": "28.jpg"
         }
@@ -383,11 +383,11 @@
         "model": "app.Student",
         "pk": 29,
         "fields": {
-            "firstName": "Лештаев",
-            "lastName": "Павел",
-            "middleName": "Викторович",
+            "first_name": "Лештаев",
+            "last_name": "Павел",
+            "middle_name": "Викторович",
             "birthday": "1990-7-6",
-            "studentTicket": "83953338",
+            "student_ticket": "83953338",
             "groupId": "2",
             "photo": "29.jpg"
         }
@@ -396,11 +396,11 @@
         "model": "app.Student",
         "pk": 30,
         "fields": {
-            "firstName": "Алина",
-            "lastName": "Грубник",
-            "middleName": "Сергеевна",
+            "first_name": "Алина",
+            "last_name": "Грубник",
+            "middle_name": "Сергеевна",
             "birthday": "1989-10-11",
-            "studentTicket": "83953339",
+            "student_ticket": "83953339",
             "groupId": "2",
             "photo": "30.jpg"
         }
@@ -409,11 +409,11 @@
         "model": "app.Student",
         "pk": 31,
         "fields": {
-            "firstName": "Андрей",
-            "lastName": "Плеханов",
-            "middleName": "Иванович",
+            "first_name": "Андрей",
+            "last_name": "Плеханов",
+            "middle_name": "Иванович",
             "birthday": "1989-4-16",
-            "studentTicket": "83953340",
+            "student_ticket": "83953340",
             "groupId": "2",
             "photo": "31.jpg"
         }
@@ -422,11 +422,11 @@
         "model": "app.Student",
         "pk": 32,
         "fields": {
-            "firstName": "Евгений",
-            "lastName": "Лукин",
-            "middleName": "Валентинович",
+            "first_name": "Евгений",
+            "last_name": "Лукин",
+            "middle_name": "Валентинович",
             "birthday": "1990-2-19",
-            "studentTicket": "83953341",
+            "student_ticket": "83953341",
             "groupId": "2",
             "photo": "32.jpg"
         }
@@ -435,11 +435,11 @@
         "model": "app.Student",
         "pk": 33,
         "fields": {
-            "firstName": "Александр",
-            "lastName": "Скорик",
-            "middleName": "Валентинович",
+            "first_name": "Александр",
+            "last_name": "Скорик",
+            "middle_name": "Валентинович",
             "birthday": "1989-5-12",
-            "studentTicket": "83953342",
+            "student_ticket": "83953342",
             "groupId": "2",
             "photo": "33.jpg"
         }
@@ -448,11 +448,11 @@
         "model": "app.Student",
         "pk": 34,
         "fields": {
-            "firstName": "Татьяна",
-            "lastName": "Коленцева",
-            "middleName": "Степановна",
+            "first_name": "Татьяна",
+            "last_name": "Коленцева",
+            "middle_name": "Степановна",
             "birthday": "1990-6-19",
-            "studentTicket": "83953343",
+            "student_ticket": "83953343",
             "groupId": "2",
             "photo": "34.jpg"
         }
@@ -461,11 +461,11 @@
         "model": "app.Student",
         "pk": 35,
         "fields": {
-            "firstName": "Юрий",
-            "lastName": "Изгаршев",
-            "middleName": "Миронович",
+            "first_name": "Юрий",
+            "last_name": "Изгаршев",
+            "middle_name": "Миронович",
             "birthday": "1987-6-13",
-            "studentTicket": "83953344",
+            "student_ticket": "83953344",
             "groupId": "2",
             "photo": "35.jpg"
         }
@@ -474,11 +474,11 @@
         "model": "app.Student",
         "pk": 36,
         "fields": {
-            "firstName": "Елена",
-            "lastName": "Афанасьева",
-            "middleName": "Павловна",
+            "first_name": "Елена",
+            "last_name": "Афанасьева",
+            "middle_name": "Павловна",
             "birthday": "1988-7-31",
-            "studentTicket": "83953345",
+            "student_ticket": "83953345",
             "groupId": "2",
             "photo": "36.jpg"
         }
@@ -487,11 +487,11 @@
         "model": "app.Student",
         "pk": 37,
         "fields": {
-            "firstName": "Татьяна",
-            "lastName": "Розпутько",
-            "middleName": "Олеговна",
+            "first_name": "Татьяна",
+            "last_name": "Розпутько",
+            "middle_name": "Олеговна",
             "birthday": "1989-8-11",
-            "studentTicket": "83953346",
+            "student_ticket": "83953346",
             "groupId": "2",
             "photo": "37.pg"
         }
@@ -500,11 +500,11 @@
         "model": "app.Student",
         "pk": 38,
         "fields": {
-            "firstName": "Андрей",
-            "lastName": "Алтухов",
-            "middleName": "Сергеевич",
+            "first_name": "Андрей",
+            "last_name": "Алтухов",
+            "middle_name": "Сергеевич",
             "birthday": "1989-9-26",
-            "studentTicket": "83953347",
+            "student_ticket": "83953347",
             "groupId": "2",
             "photo": "38.jpg"
         }
@@ -513,11 +513,11 @@
         "model": "app.Student",
         "pk": 39,
         "fields": {
-            "firstName": "Сергей",
-            "lastName": "Черкашин",
-            "middleName": "Петрович",
+            "first_name": "Сергей",
+            "last_name": "Черкашин",
+            "middle_name": "Петрович",
             "birthday": "1989-10-1",
-            "studentTicket": "83953349",
+            "student_ticket": "83953349",
             "groupId": "2",
             "photo": "39.jpg"
         }
@@ -526,11 +526,11 @@
         "model": "app.Student",
         "pk": 40,
         "fields": {
-            "firstName": "Александр",
-            "lastName": "Сапрыкин",
-            "middleName": "Геннадиевич",
+            "first_name": "Александр",
+            "last_name": "Сапрыкин",
+            "middle_name": "Геннадиевич",
             "birthday": "1989-7-10",
-            "studentTicket": "83953350",
+            "student_ticket": "83953350",
             "groupId": "2",
             "photo": "40.jpg"
         }

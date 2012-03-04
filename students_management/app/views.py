@@ -5,8 +5,11 @@ from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage, InvalidPage
 from django.db.models import Max
 
+from re import search
+
 from app.models import *
 from app.forms import *
+from settings import MEDIA_ROOT
 
 
 def main_page(request):
@@ -84,12 +87,38 @@ def student_page(request, studentId):
 
 def student_form_page(request):
     if request.method == 'POST':
-        pass
+        if request.POST.get('id') not in ['', None]:
+            student = Student.objects.get(id=request.POST.get('id'))
+        else:
+            student = None
+        #if 'file' in request.FILES:
+            #photo = request.FILES['file']
+            #photoName = photo['filename']
+            #with file("{0}{1}".format(MEDIA_ROOT, photoName), 'wb') as f:
+                #f.write(photo['content'])
+        form = StudentForm(request.POST, request.FILES, instance=student)
+        form.fields['groupId'].queryset = Group.objects.all()
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/group/{0}'.format(form.instance.groupId.id))
+        variables = {'form': form, 'add': True}
     elif request.GET.has_key('id'):
-        pass
+        studentId = int(request.GET.get('id'))
+        student = Student.objects.get(id=studentId)
+        form = StudentForm(instance=student)
+        form.fields['groupId'].queryset = Group.objects.all()
+        variables = {'form': form, 'edit': True}
     else:
         form = StudentForm()
+        form.fields['groupId'].queryset = Group.objects.all()
+        try:
+            groupId = search('/group/(\d)+', request.META['HTTP_REFERER']).group(1)
+        except:
+            groupId = None
+        form.fields['groupId'].initial = groupId
+        form.fields['groupId'].widget.attrs['readonly'] = True
+        variables = {'form': form, 'add': True}
 
-    variables = RequestContext(request, {'form': form})
+    variables = RequestContext(request, variables)
 
     return render_to_response('student_form.html', variables, context_instance=RequestContext(request))

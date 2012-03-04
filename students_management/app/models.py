@@ -4,12 +4,12 @@ from sorl.thumbnail import ImageField
 # Create your models here.
 class Student(models.Model):
     id = models.AutoField(primary_key=True)
-    firstName = models.CharField(max_length=32, null=False)
-    lastName = models.CharField(max_length=32, null=False)
-    middleName = models.CharField(max_length=32, null=False)
-    photo = ImageField(upload_to="/images")
+    first_name = models.CharField(max_length=32, null=False)
+    last_name = models.CharField(max_length=32, null=False)
+    middle_name = models.CharField(max_length=32, null=False)
+    photo = ImageField(upload_to=".")
     birthday = models.DateField(null=False)
-    studentTicket = models.IntegerField(null=False)
+    student_ticket = models.IntegerField(null=False)
     groupId = models.ForeignKey('app.Group', blank=True, null=True, on_delete=models.SET_NULL)
 
 

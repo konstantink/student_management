@@ -7,7 +7,7 @@ from app.models import *
 
 class StudentChoiceField(ModelChoiceField):
     def label_from_instance(self, obj):
-        return u"{0} {1} {2}".format(obj.lastName, obj.firstName, obj.middleName)
+        return u"{0} {1} {2}".format(obj.last_name, obj.first_name, obj.middle_name)
 
 
 class GroupForm(ModelForm):
@@ -27,9 +27,14 @@ class GroupForm(ModelForm):
         }
 
 
+class GroupChoiceField(ModelChoiceField):
+    def label_from_instance(self, obj):
+        return u"{0}".format(obj.name)
+
+
 class StudentForm(ModelForm):
+    id = IntegerField(widget=HiddenInput, required=False)
+    groupId = GroupChoiceField(None, "(none)", label='Group')
+
     class Meta:
         model = Student
-        widgets = {
-            'groupId': TextInput(attrs={'readonly':True})
-        }

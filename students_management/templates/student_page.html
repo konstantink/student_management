@@ -1,11 +1,21 @@
 {%extends 'base.html'%}
 {%block content%}
-    <div class="clr">
-        <img src="{{student.photo.url}}" style="float: left; margin-right: 10px;" />
-        <p><span class="field">Last name:</span> <span class="value">{{student.lastName}}</span></p>
-        <p><span class="field">First name:</span> <span class="value">{{student.firstName}}</span></p>
-        <p><span class="field">Middle name:</span> <span class="value">{{student.middleName}}</span></p>
-        <p><span class="field">Birthday:</span> <span class="value">{{student.birthday}}</span></p>
-        <p><span class="field">Group:</span> <span class="value">{{student.groupId.name}}</span></p>
+    <div class="row">
+        <div class="span12">
+            <h2 style="display:inline;">Student:</h2>&nbsp;&nbsp;&nbsp;
+            <a href="/student/edit?id={{student.id}}"><i class="icon-pencil" onmouseover="onMouseOver('student', 'edit')" onmouseout="onMouseOut('student', 'edit')"></i></a>
+            <span class="student-edit-text">Edit student</span>
+            <a href="#"><i class="icon-trash" onmouseover="onMouseOver('student', 'remove')" onmouseout="onMouseOut('student', 'remove')"></i></a>
+            <span class="student-remove-text">Remove student</span>
+            <div class="clr">
+                <img src="{{student.photo.url}}" style="float: left; margin-right: 10px;" />
+                <p><span class="field">Last name:</span> <span class="value">{{student.last_name}}</span></p>
+                <p><span class="field">First name:</span> <span class="value">{{student.first_name}}</span></p>
+                <p><span class="field">Middle name:</span> <span class="value">{{student.middle_name}}</span></p>
+                <p><span class="field">Birthday:</span> <span class="value">{{student.birthday}}</span></p>
+                <p><span class="field">Group:</span> <span class="value">{{student.groupId.name}}</span></p>
+                <p><span class="field">Ticket:</span> <span class="value">{{student.student_ticket}}</span></p>
+            </div>
+        </div>
     </div>
 {%endblock%}

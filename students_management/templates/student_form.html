@@ -1,7 +1,17 @@
 {%extends 'base.html'%}
 {%block content%}
-<form id="student-form" method="POST" action="/student/save" class="form-inline">{%csrf_token%}
+{%if form_errors%}
+    Yo
+    {{form_errors}}
+{%endif%}
+<form id="student-form" enctype="multipart/form-data" method="POST" action="/student/save" class="form-inline">{%csrf_token%}
     {{form.as_p}}
-    <input type="submit" value="Add student" />
+    {%if edit%}
+        <input type="submit" value="Save changes" />
+    {%else%}
+        {%if add%}
+            <input type="submit" value="Add student" />
+        {%endif%}
+    {%endif%}
 </form>
 {%endblock%}

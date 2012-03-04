@@ -17,15 +17,19 @@
             <tbody>
                 {%for student in students.object_list%}
                     <tr>
-                        <td><a href="/student/{{student.id}}">{{student.id}}</a></td>
-                        <td>{{student.lastName}}</td>
-                        <td>{{student.firstName}}</td>
-                        <td>{{student.middleName}}</td>
+                        <td>
+                            <a href="/student/{{student.id}}">{{student.id}}</a>&nbsp;&nbsp;&nbsp;
+                            <a href="/student/edit?id={{student.id}}"><i class="icon-pencil"></i></a>
+                            <a href="#"><i class="icon-trash"></i></a>
+                        </td>
+                        <td>{{student.last_name}}</td>
+                        <td>{{student.first_name}}</td>
+                        <td>{{student.middle_name}}</td>
                         <td>{{student.birthday}}</td>
-                        <td>{{student.studentTicket}}</td>
+                        <td>{{student.student_ticket}}</td>
                         <td>
                             {% thumbnail student.photo "50x50" crop="center" as im%}
-                                <img src="{{im.url}}" width="{{im.width}}" height="{{im.height}}">
+                                <a href="/student/{{student.id}}"><img src="{{im.url}}" width="{{im.width}}" height="{{im.height}}"></a>
                             {% endthumbnail %}
                         </td>
                     </tr>
