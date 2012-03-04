@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 from django.forms.models import BaseFormSet
-from django.forms import HiddenInput
+from django.forms import HiddenInput, TextInput
 from django.forms import ModelChoiceField, CharField, ChoiceField, IntegerField, ValidationError
 from app.models import *
 
@@ -13,6 +13,13 @@ class StudentChoiceField(ModelChoiceField):
 class GroupForm(ModelForm):
     seniorId = StudentChoiceField(None, "(nobody)", label='Senior', required=False)
 
+    def clean_name(self):
+        from re import match, UNICODE
+        name = self.cleaned_data['name']
+        if match('^[\w\-]+$', name, UNICODE):
+            return name
+        raise ValidationError("Incorrect name '{0}' for group. Name can contain only alphanumeric, underscore and dash".format(name))
+
     class Meta:
         model = Group
         widgets = {
@@ -23,3 +30,6 @@ class GroupForm(ModelForm):
 class StudentForm(ModelForm):
     class Meta:
         model = Student
+        widgets = {
+            'groupId': TextInput(attrs={'readonly':True})
+        }

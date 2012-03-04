@@ -4,7 +4,8 @@
     text-align: center;
 }
 
-.edit-text, .add-text {
+.group-edit-text, .group-add-text,
+.student-edit-text, .student-add-text {
     font: normal 8pt verdana,serif;
     color: gray;
     display: none;

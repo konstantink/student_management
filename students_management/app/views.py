@@ -81,3 +81,15 @@ def student_page(request, studentId):
     variables = RequestContext(request, {'student': student})
 
     return render_to_response('student_page.html', variables)
+
+def student_form_page(request):
+    if request.method == 'POST':
+        pass
+    elif request.GET.has_key('id'):
+        pass
+    else:
+        form = StudentForm()
+
+    variables = RequestContext(request, {'form': form})
+
+    return render_to_response('student_form.html', variables, context_instance=RequestContext(request))

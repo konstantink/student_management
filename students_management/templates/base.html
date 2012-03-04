@@ -6,8 +6,14 @@
         <link rel="stylesheet" href="/site-media/css/style.css" type="text/css" />
         <script type="text/javascript" src="/site-media/js/jquery.min.js"></script>
         <script type="text/javascript" src="/site-media/js/bootstrap.js"></script>
-        {%block extra%}
-        {%endblock%}
+        <script type="text/javascript">
+            function onMouseOver(whatToShow, action){
+                $("."+whatToShow+"-"+action+"-text").toggle();
+            }
+            function onMouseOut(whatToShow, action){
+                $("."+whatToShow+"-"+action+"-text").toggle();
+            }
+        </script>
     </head>
     <body>
         {%include 'navigation.html'%}
