@@ -12,13 +12,15 @@ from app.forms import *
 from settings import MEDIA_ROOT
 
 
-def main_page(request):
+def main_page(request, *args, **kwargs):
     """ Main page: list of groups """
     groups = Group.objects.order_by('id')
     for group in groups:
         group.studentsNum = Student.objects.select_related('groupId').filter(groupId=group.id).count()
 
-    variables = RequestContext(request, {'groups': groups})
+    variables = {'groups': groups}
+    variables.update(kwargs)
+    variables = RequestContext(request, variables)
 
     return render_to_response('main_page.html', variables)
 
