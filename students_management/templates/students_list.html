@@ -20,7 +20,7 @@
                         <td>
                             <a href="/student/{{student.id}}">{{student.id}}</a>&nbsp;&nbsp;&nbsp;
                             <a href="/student/edit?id={{student.id}}"><i class="icon-pencil"></i></a>
-                            <a href="#"><i class="icon-trash"></i></a>
+                            <a onclick="changeHref({{student.id}})" data-toggle="modal" href="#student-delete-request"><i class="icon-trash"></i></a>
                         </td>
                         <td>{{student.last_name}}</td>
                         <td>{{student.first_name}}</td>
@@ -51,3 +51,5 @@
         </div>
     </div>
 </div>
+
+{%include 'student_delete_modal.html'%}

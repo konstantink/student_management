@@ -5,7 +5,7 @@
             <h2 style="display:inline">Group: {{group.name}}</h2>&nbsp;&nbsp;&nbsp;
             <a href="/group/edit?id={{group.id}}"><i class="icon-pencil" onmouseover="onMouseOver('group', 'edit')" onmouseout="onMouseOut('group', 'edit')"></i></a>
             <span class="group-edit-text">Edit group</span>
-            <a href="#"><i class="icon-trash" onmouseover="onMouseOver('group', 'remove')" onmouseout="onMouseOut('group', 'remove')"></i></a>
+            <a href="#group-delete-request" data-toggle="modal" onclick="changeHref({{group.id}})"><i class="icon-trash" onmouseover="onMouseOver('group', 'remove')" onmouseout="onMouseOut('group', 'remove')"></i></a>
             <span class="group-remove-text">Remove group</span>
             {%if students%}
                 {%include "students_list.html"%}
@@ -14,4 +14,6 @@
             {%endif%}
         </div>
     </div>
+
+    {%include 'group_delete_modal.html'%}
 {%endblock%}

@@ -75,6 +75,18 @@ def group_form_page(request):
     return render_to_response('group_form.html', variables, context_instance=RequestContext(request))
 
 
+def group_delete_page(request):
+    groupId = request.GET.get('id')
+    group = Group.objects.get(id=groupId)
+    try:
+        group.delete()
+    except:
+        pass
+
+    return main_page(request)
+
+
+
 def student_page(request, studentId):
     try:
         student = Student.objects.get(id=studentId)
@@ -122,3 +134,16 @@ def student_form_page(request):
     variables = RequestContext(request, variables)
 
     return render_to_response('student_form.html', variables, context_instance=RequestContext(request))
+
+
+def student_delete_page(request):
+    studentId = request.GET.get('id')
+    student = Student.objects.get(id=studentId)
+    groupId = student.groupId.id
+    try:
+        student.delete()
+    except:
+        pass
+
+    return group_page(request, groupId)
+

@@ -1,0 +1,19 @@
+<script type="text/javascript">
+    function changeHref(groupId){
+        $('#group-delete-request .btn-primary')[0].setAttribute('href', "/group/delete?id="+groupId);
+    }
+</script>
+
+<div class="modal fade" id="group-delete-request">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Confirmation</h3>
+    </div>
+    <div class="modal-body">
+        <p>Do you really want to delete this group?</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn btn-primary">Delete</a>
+        <a class="btn" data-dismiss="modal">Cancel</a>
+    </div>
+</div>
