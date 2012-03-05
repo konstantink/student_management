@@ -51,16 +51,15 @@ def group_page(request, groupId):
 
 def group_form_page(request):
     if request.method == 'POST':
-        try:
+        if request.POST.get('id') not in ['', None]:
             group = Group.objects.get(id=request.POST.get('id'))
-        except Group.DoesNotExist:
-            seniorId = request.POST.get(u'seniorId') or None
-            group = Group(id=request.POST.get(u'id'), name=request.POST.get(u'name'), seniorId=seniorId)
+        else:
+            group = None
         form = GroupForm(request.POST, instance=group)
-        form.fields['seniorId'].queryset = Student.objects.filter(groupId=group.id)
+        form.fields['seniorId'].queryset = Student.objects.all()
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/group/{0}'.format(group.id))
+            return HttpResponseRedirect('/group/{0}'.format(form.instance.id))
     elif request.GET.has_key('id'):
         groupId = int(request.GET.get('id'))
         group = Group.objects.get(id=groupId)
@@ -68,9 +67,7 @@ def group_form_page(request):
         form.fields['seniorId'].queryset = Student.objects.filter(groupId=groupId)
     else:
         form = GroupForm()
-        newId = int(Group.objects.all().aggregate(Max('id'))['id__max'])+1
-        form.fields['id'].initial = newId
-        form.fields['seniorId'].queryset = Student.objects.filter(groupId=newId)
+        form.fields['seniorId'].queryset = Student.objects.none()
 
     variables = RequestContext(request, {'form': form})
     
@@ -105,11 +102,6 @@ def student_form_page(request):
             student = Student.objects.get(id=request.POST.get('id'))
         else:
             student = None
-        #if 'file' in request.FILES:
-            #photo = request.FILES['file']
-            #photoName = photo['filename']
-            #with file("{0}{1}".format(MEDIA_ROOT, photoName), 'wb') as f:
-                #f.write(photo['content'])
         form = StudentForm(request.POST, request.FILES, instance=student)
         form.fields['groupId'].queryset = Group.objects.all()
         if form.is_valid():
